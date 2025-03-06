@@ -11,11 +11,11 @@ import (
 func main() {
 	http.HandleFunc("/", handlers.HomeHandler)
 	http.HandleFunc("/hello", handlers.HelloHandler)
-	http.HandleFunc("/user", handlers.UserHandler)
-	http.HandleFunc("/user/get", handlers.ItemHandler)
-	http.HandleFunc("/user/create", handlers.CreateItemHandler)
-	http.HandleFunc("/user/update", handlers.UpdateItemHandler)
-	http.HandleFunc("/user/delete", handlers.DeleteItemHandler)
+	http.HandleFunc("/users", handlers.UserHandler)
+	http.HandleFunc("/user/get", handlers.GetUserHandler)
+	http.HandleFunc("/user/create", handlers.CreateUserHandler)
+	http.HandleFunc("/user/update", handlers.UpdateUserHandler)
+	http.HandleFunc("/user/delete", handlers.DeleteUserHandler)
 	log.Println("Starting server on :8080...")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 
