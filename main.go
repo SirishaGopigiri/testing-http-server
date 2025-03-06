@@ -22,9 +22,9 @@ func main() {
 	r.HandleFunc("/hello", handlers.HelloHandler).Methods(http.MethodGet)
 	r.HandleFunc("/users", handlers.UsersHandler).Methods(http.MethodGet)
 	r.HandleFunc("/user", handlers.CreateUserHandler).Methods(http.MethodPost)
-	r.HandleFunc("/user/{id}", handlers.GetUserHandler).Methods(http.MethodGet)
-	r.HandleFunc("/user/{id}", handlers.UpdateUserHandler).Methods(http.MethodPut)
-	r.HandleFunc("/user/{id}", handlers.DeleteUserHandler).Methods(http.MethodDelete)
+	r.HandleFunc("/user/{name}", handlers.GetUserHandler).Methods(http.MethodGet)
+	r.HandleFunc("/user/{name}", handlers.UpdateUserHandler).Methods(http.MethodPut)
+	r.HandleFunc("/user/{name}", handlers.DeleteUserHandler).Methods(http.MethodDelete)
 
 	port := "8080"
 	fmt.Println("Server is running on port", port)
